@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # end
 
   namespace :api do
-    get "/hello:wildcard" => "params#hello_action"
+    get "/query_path" => "params#query_action"
+    get "/segment_path/:message" => "params#segment_action"
+    post "/body_path" => "params#body_action"
   end
 end
